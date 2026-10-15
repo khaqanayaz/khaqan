@@ -1,0 +1,1097 @@
+/* Noor Islamic Super App - Component Styles for Sanctuary Experience */
+
+/* Wallpaper & Vignette */
+.wallpaper-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.6s ease-in-out;
+  transform: scale(1.02);
+}
+
+.wallpaper-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.68) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.88) 100%);
+}
+
+/* Top Bar: Celestial Hijri & Prayer Chip */
+.reels-top-bar {
+  position: relative;
+  z-index: 30;
+  padding-top: 48px;
+  padding-left: 18px;
+  padding-right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chip-pill {
+  padding: 6px 12px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+}
+
+.celestial-chip {
+  border-color: rgba(212, 175, 55, 0.45);
+}
+
+.sound-chip {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sound-chip:active {
+  transform: scale(0.94);
+}
+
+.sound-wave-bars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 12px;
+}
+
+.sound-wave-bars span {
+  width: 2px;
+  background: var(--gold-primary);
+  border-radius: 9999px;
+}
+
+.sound-wave-bars span:nth-child(1) { height: 6px; }
+.sound-wave-bars span:nth-child(2) { height: 11px; }
+.sound-wave-bars span:nth-child(3) { height: 4px; }
+
+/* Verse Slide */
+.verse-content-box {
+  max-width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.verse-meta-tag {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gold-glow);
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 2px 10px;
+  border-radius: 9999px;
+}
+
+.verse-meta-tag.hadith {
+  color: #34D399;
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.arabic-hero-text {
+  font-family: var(--font-arabic);
+  font-size: 1.85rem;
+  line-height: 2.2;
+  color: #FFFDF5;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.9);
+}
+
+.english-clean-text {
+  font-family: var(--font-serif);
+  font-size: 1.22rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #FFFFFF;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.85);
+}
+
+.urdu-sub-text {
+  font-family: var(--font-urdu);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: rgba(245, 215, 127, 0.9);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+
+/* Approach 1: The Spiritual Action Capsule */
+.capsule-container {
+  position: relative;
+  z-index: 30;
+  padding-bottom: 84px; /* Space above the floating dock */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spiritual-capsule {
+  height: 42px;
+  padding: 0 10px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+}
+
+.capsule-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 6px 10px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.capsule-btn:active {
+  transform: scale(0.94);
+}
+
+.capsule-btn.card-highlight {
+  background: rgba(212, 175, 55, 0.22);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  color: var(--gold-glow);
+}
+
+.capsule-divider {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Mihrab Curved Floating Dock - Permanently Docked */
+.mihrab-dock-fixed {
+  position: absolute;
+  bottom: 14px;
+  left: 16px;
+  right: 16px;
+  height: 60px;
+  border-radius: 9999px;
+  background: linear-gradient(180deg, rgba(254, 252, 248, 0.96) 0%, rgba(243, 236, 224, 0.98) 100%);
+  border: 1.5px solid rgba(196, 154, 75, 0.45);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow: 0 12px 35px rgba(65, 48, 28, 0.18), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 8px;
+  z-index: 40;
+}
+
+.nav-tab-btn {
+  background: none;
+  border: none;
+  color: #7A6855;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-tab-btn.active {
+  color: var(--amber-primary);
+}
+
+.tab-icon {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.tab-text {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.ios-home-bar {
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 4px;
+  background: rgba(42, 30, 20, 0.35);
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 50;
+}
+
+/* ========================================================
+   SCREEN 2: WIDGET STUDIO (SANCTUARY)
+   ======================================================== */
+.widget-screen-bg {
+  background: #FAF6EE;
+  color: #221810;
+  padding: 50px 18px 94px; /* ample padding for bottom dock */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.widget-screen-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(196, 154, 75, 0.25);
+}
+
+.btn-return-home {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: #FFFFFF;
+  border: 1px solid rgba(196, 154, 75, 0.4);
+  color: var(--amber-primary);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(60, 45, 30, 0.05);
+}
+
+.btn-return-home:active {
+  transform: scale(0.94);
+}
+
+.sanctuary-title {
+  font-family: var(--font-cinzel);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2A1E14;
+}
+
+.widget-card {
+  background: #FFFFFF;
+  border: 2px solid rgba(196, 154, 75, 0.35);
+  border-radius: 26px;
+  padding: 16px;
+  box-shadow: 0 8px 25px rgba(70, 50, 30, 0.06);
+}
+
+.widget-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.widget-label-gold {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--gold-primary);
+}
+
+.widget-label-subtle {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #94A3B8;
+}
+
+.widget-label-emerald {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--emerald-primary);
+}
+
+.badge-subtle {
+  font-size: 10px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 2px 8px;
+  border-radius: 9999px;
+  color: #CBD5E1;
+}
+
+.prayer-main-info {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 4px 0 10px;
+}
+
+.prayer-title-large {
+  font-size: 24px;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+
+.prayer-subtitle {
+  font-size: 11px;
+  color: var(--gold-glow);
+}
+
+.countdown-val {
+  font-family: monospace;
+  font-size: 24px;
+  font-weight: 900;
+  color: #34D399;
+  letter-spacing: 1px;
+}
+
+.prayer-time-target {
+  font-size: 10px;
+  color: #94A3B8;
+}
+
+.timetable-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+.time-box {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px 2px;
+  border-radius: 8px;
+  font-size: 10px;
+}
+
+.time-box span {
+  display: block;
+  color: #94A3B8;
+  font-size: 9px;
+}
+
+.time-box.active-maghrib {
+  background: rgba(212, 175, 55, 0.2);
+  border: 1px solid var(--gold-primary);
+}
+
+.time-box.active-maghrib span {
+  color: var(--gold-glow);
+  font-weight: 700;
+}
+
+.dual-widget-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.qibla-card, .tasbih-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 14px 10px;
+}
+
+.qibla-compass-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 2px dashed rgba(212, 175, 55, 0.35);
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0;
+}
+
+.compass-needle {
+  width: 4px;
+  height: 44px;
+  background: linear-gradient(to top, transparent 40%, #EF4444 40%);
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+.qibla-deg {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--gold-glow);
+}
+
+.qibla-km {
+  font-size: 9px;
+  color: #94A3B8;
+}
+
+.tasbih-circle-tap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(212, 175, 55, 0.15));
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.tasbih-num {
+  font-size: 18px;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+
+.tasbih-max {
+  font-size: 9px;
+  font-weight: 700;
+  color: #CBD5E1;
+}
+
+.tasbih-arabic-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.tasbih-tap-sub {
+  font-size: 9px;
+  color: var(--gold-glow);
+}
+
+/* Salah Tracker */
+.salah-pills-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+  margin-top: 8px;
+}
+
+.salah-check-btn {
+  padding: 8px 2px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94A3B8;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.salah-check-btn.active {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10B981;
+  color: #34D399;
+}
+
+.streak-text {
+  font-size: 11px;
+  font-weight: 800;
+  color: #F97316;
+}
+
+/* ========================================================
+   SCREEN 3: FULL TASBIH SCREEN
+   ======================================================== */
+.tasbih-full-screen {
+  background: linear-gradient(180deg, #081B15 0%, #040C09 100%);
+  padding: 50px 20px 94px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tasbih-header {
+  text-align: center;
+}
+
+.tasbih-arabic-giant {
+  font-family: var(--font-arabic);
+  font-size: 32px;
+  color: #FFFFFF;
+  margin-top: 4px;
+}
+
+.tasbih-meaning {
+  font-size: 12px;
+  color: #94A3B8;
+}
+
+.giant-tasbih-disc {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0F3628 0%, #071913 100%);
+  border: 4px solid var(--gold-primary);
+  box-shadow: 0 0 50px rgba(212, 175, 55, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.giant-tasbih-disc:active {
+  transform: scale(0.94);
+}
+
+.giant-tasbih-num {
+  font-size: 60px;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+
+.giant-tasbih-target {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--gold-glow);
+}
+
+.dhikr-pills-row {
+  display: flex;
+  gap: 8px;
+}
+
+.dhikr-choice {
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 11px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #CBD5E1;
+  cursor: pointer;
+}
+
+.dhikr-choice.active {
+  background: var(--gold-primary);
+  color: #000000;
+  font-weight: 800;
+  border-color: var(--gold-primary);
+}
+
+/* ========================================================
+   SCREEN 4: MUSHAF SCREEN
+   ======================================================== */
+.mushaf-screen {
+  background: #04120D;
+  padding: 50px 18px 94px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.surah-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.surah-item {
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: #092119;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.surah-item:hover {
+  border-color: var(--gold-primary);
+}
+
+.surah-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.surah-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--gold-primary);
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.surah-meta h4 {
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.surah-meta p {
+  font-size: 10px;
+  color: #94A3B8;
+}
+
+.surah-arabic-name {
+  font-family: var(--font-arabic);
+  font-size: 18px;
+  color: var(--gold-glow);
+}
+
+/* ========================================================
+   VIRAL STORY CARD MODAL
+   ======================================================== */
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.story-card-frame {
+  position: relative;
+  width: 270px;
+  height: 460px;
+  border-radius: 28px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background: linear-gradient(180deg, #092119 0%, #040E0A 100%);
+  border: 2px solid var(--gold-primary);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9);
+}
+
+.arabesque-corner-tl {
+  position: absolute; top: 12px; left: 12px; width: 26px; height: 26px;
+  border-top: 2px solid #D4AF37; border-left: 2px solid #D4AF37;
+}
+.arabesque-corner-br {
+  position: absolute; bottom: 12px; right: 12px; width: 26px; height: 26px;
+  border-bottom: 2px solid #D4AF37; border-right: 2px solid #D4AF37;
+}
+
+.story-card-top span {
+  font-family: var(--font-cinzel);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--gold-primary);
+  font-weight: 800;
+}
+
+.gold-divider {
+  width: 48px;
+  height: 2px;
+  background: rgba(212, 175, 55, 0.4);
+  margin: 6px auto;
+}
+
+.story-card-center {
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.story-arabic {
+  font-family: var(--font-arabic);
+  font-size: 19px;
+  color: #FFFDF5;
+  line-height: 2;
+}
+
+.story-english {
+  font-family: var(--font-serif);
+  font-size: 12px;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+.story-meta {
+  font-size: 9px;
+  color: var(--gold-glow);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.watermark-brand {
+  font-size: 9px;
+  font-weight: 800;
+  color: #CBD5E1;
+  letter-spacing: 1px;
+}
+
+.watermark-tag {
+  font-size: 8px;
+  color: var(--emerald-primary);
+}
+
+.story-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.btn-gold {
+  padding: 8px 18px;
+  border-radius: 9999px;
+  background: var(--gold-primary);
+  color: #000000;
+  font-size: 11px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-dim {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Tadabbur Sheet */
+.tadabbur-sheet-box {
+  width: 100%;
+  max-height: 80%;
+  background: #081B15;
+  border-top: 2px solid var(--gold-primary);
+  border-radius: 36px 36px 0 0;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: transform 0.32s cubic-bezier(0.2, 0.9, 0.3, 1);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
+}
+
+.modal-backdrop.open .tadabbur-sheet-box {
+  transform: translateY(0);
+}
+
+.sheet-drag-handle {
+  width: 40px;
+  height: 4px;
+  background: rgba(212, 175, 55, 0.3);
+  border-radius: 9999px;
+  margin: 0 auto 10px;
+}
+
+.sheet-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sheet-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--gold-glow);
+}
+
+.sheet-subtitle {
+  font-size: 11px;
+  color: #34D399;
+}
+
+.sheet-close-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: #94A3B8;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scholar-tabs-row {
+  display: flex;
+  gap: 6px;
+  padding: 10px 0;
+  overflow-x: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.t-tab {
+  padding: 5px 12px;
+  border-radius: 9999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #CBD5E1;
+  cursor: pointer;
+}
+
+.t-tab.active {
+  background: var(--gold-primary);
+  color: #000000;
+  font-weight: 800;
+}
+
+.sheet-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-arabic-quote {
+  font-family: var(--font-arabic);
+  font-size: 20px;
+  text-align: right;
+  direction: rtl;
+  color: var(--gold-glow);
+  background: rgba(0, 0, 0, 0.35);
+  padding: 12px;
+  border-radius: 16px;
+  border-right: 3px solid var(--gold-primary);
+}
+
+.modal-commentary-box {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #E2E8F0;
+  line-height: 1.6;
+}
+
+/* Location Top Bar Button */
+.location-btn {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  transition: all 0.2s;
+}
+.location-btn:active {
+  transform: scale(0.95);
+}
+.loc-caret {
+  font-size: 8px;
+  color: rgba(245, 215, 127, 0.8);
+}
+
+/* Toast Banner */
+.toast-banner {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-10px);
+  background: rgba(12, 40, 31, 0.96);
+  border: 1px solid var(--gold-primary);
+  border-radius: 9999px;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  backdrop-filter: blur(12px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1);
+  z-index: 90;
+}
+.toast-banner.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Social Share Grid */
+.social-share-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  width: 100%;
+  margin: 10px 0;
+}
+.social-btn {
+  padding: 8px 6px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.4);
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.social-btn:active {
+  transform: scale(0.95);
+}
+.social-btn.wa { background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.4); color: #25D366; }
+.social-btn.ig { background: linear-gradient(135deg, rgba(131,58,180,0.2), rgba(253,29,29,0.2)); border-color: rgba(253,29,29,0.4); color: #FCB045; }
+.social-btn.tiktok { background: rgba(0, 0, 0, 0.7); border-color: rgba(255, 255, 255, 0.3); color: #FFFFFF; }
+.social-btn.tw { background: rgba(0, 0, 0, 0.6); border-color: rgba(255, 255, 255, 0.2); color: #FFFFFF; }
+.social-btn.fb { background: rgba(24, 119, 242, 0.15); border-color: rgba(24, 119, 242, 0.4); color: #1877F2; }
+.social-btn.tg { background: rgba(34, 158, 217, 0.15); border-color: rgba(34, 158, 217, 0.4); color: #229ED9; }
+
+/* Wallpaper Drawer & Location Sheet */
+.slide-sheet-box {
+  width: 100%;
+  max-height: 85%;
+  background: #081B15;
+  border-top: 2px solid var(--gold-primary);
+  border-radius: 36px 36px 0 0;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: transform 0.32s cubic-bezier(0.2, 0.9, 0.3, 1);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.8);
+}
+.modal-backdrop.open .slide-sheet-box {
+  transform: translateY(0);
+}
+
+.tint-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin: 8px 0;
+}
+.tint-btn {
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #CBD5E1;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tint-btn.active {
+  background: var(--gold-primary);
+  color: #000000;
+  font-weight: 800;
+  border-color: var(--gold-primary);
+}
+
+.wallpaper-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  overflow-y: auto;
+  max-height: 260px;
+  padding-bottom: 8px;
+}
+.wallpaper-thumb-card {
+  padding: 6px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.wallpaper-thumb-card.active, .wallpaper-thumb-card:hover {
+  border-color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.15);
+}
+.wallpaper-img-box {
+  height: 64px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.city-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 8px 12px;
+  margin: 8px 0;
+}
+.city-search-box input {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 12px;
+  outline: none;
+  width: 100%;
+}
+.cities-list-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+  max-height: 280px;
+}
+.city-item-row {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.city-item-row:hover, .city-item-row.active {
+  border-color: var(--gold-primary);
+  background: rgba(212, 175, 55, 0.12);
+}
+
